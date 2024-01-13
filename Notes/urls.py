@@ -1,6 +1,7 @@
-from django.urls import path, inlcude
-from . import views
+from django.urls import path
+from .views import getRoutes
 
-urlspatterns = [path('', views.getRoutes, name='routes')
-path('', include('Notes.urls'))
+urlpatterns = [
+    path('', getRoutes, name='routes'),
+    # Add more patterns if needed
 ]
